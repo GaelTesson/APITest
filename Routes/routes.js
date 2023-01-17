@@ -1,15 +1,19 @@
 import express from 'express'
 import user from './user.js'
-import offer from './offer.js'
-import engine from './engine.js'
+import park from './park.js'
+import car from './car.js'
+import incident from './incident.js'
+
 
 const router = express.Router()
 
 router.get('/', (req, res) => res.status(200).json({ message: 'Welcome to IzyDrive API' }))
 
 router.use('/users', user)
-router.use('/offers', offer)
-router.use('/engines', engine)
+router.use('/parks', park)
+router.use('/cars', car)
+router.use('/incidents', incident)
+router.use('/rent', rent)
 
 
 export default router

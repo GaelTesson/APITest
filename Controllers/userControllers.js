@@ -22,7 +22,7 @@ export const updateUser = async (req, res) => {
 }
 
 export const deleteUser = async (req, res) => {
-    const users = await userModel.findByIdAndDelete
-        (req.params.id, req.body);
+    const users = await userModel.findByIdAndDelete(req.params.id, req.body);
     res.status(200).json(users)
 }
+

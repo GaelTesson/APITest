@@ -5,7 +5,7 @@ import {catchErrors} from '../Helpers/helpers.js'
 const router = express.Router()
 
 
-// Ajour d'un utilisateur
+// Ajout d'un utilisateur
 router.post('/', catchErrors(addUser)) 
 
 // Récupération de tous les utilisateurs
