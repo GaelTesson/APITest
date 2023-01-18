@@ -51,8 +51,7 @@ const rentSchema = new mongoose.Schema({
     },
     incident : {
         type: Boolean,
-        default: false,
-
+        default: false
     },
     starting_pics_car : {
         left_side: {

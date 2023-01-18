@@ -1,4 +1,4 @@
-import Incident from "../Models/incidentModel";
+import Incident from "../Models/incidentModel.js";
 //
 export const getIncidents = async (req, res) => {
     const incidents = await Incident.find({});
@@ -9,6 +9,7 @@ export const getIncidentById = async (req, res) => {
     const incidents = await Incident.findById(req.params.id);
     res.status(200).json(incidents);
     }
+
 //
 export const addIncident = async (req, res) => {
     const incident = new Incident(req.body);
