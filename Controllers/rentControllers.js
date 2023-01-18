@@ -1,4 +1,4 @@
-import Rent from "../Models/rentModel";
+import Rent from "../Models/rentModel.js";
 
 export const getRents = async (req, res) => {
     const rents = await Rent.find({});

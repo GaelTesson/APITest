@@ -3,6 +3,7 @@ import user from './user.js'
 import park from './park.js'
 import car from './car.js'
 import incident from './incident.js'
+import rent from './rent.js'
 
 
 const router = express.Router()
