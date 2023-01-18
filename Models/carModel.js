@@ -2,7 +2,12 @@ import mongoose from "mongoose";
 
 const carSchema = new mongoose.Schema({
 
-    category : {
+    category : { // utilitaire, citadine...etc
+        type: String,
+        required: true,
+        trim: true
+    },
+    model : {
         type: String,
         required: true,
         trim: true
@@ -19,8 +24,9 @@ const carSchema = new mongoose.Schema({
     },
     park : {
         park_id : {
-        type: mongoose.Types.ObjectId,
-        ref: 'Park'
+            type: String
+        //type: mongoose.Types.ObjectId,
+        //ref: 'Park'
         }   
     },
     doc: {
@@ -86,8 +92,8 @@ const carSchema = new mongoose.Schema({
         }
     },
 
-    spacs: {
-        engine: {
+    specs: {
+        engine: { // diesel, electrique, essence...etc
             type: String,
             required: true,
             trim: true
@@ -107,11 +113,6 @@ const carSchema = new mongoose.Schema({
             required: true,
             trim: true
         },
-        type: {
-            type: String,
-            required: true,
-            trim: true
-        }
         },
 
 });

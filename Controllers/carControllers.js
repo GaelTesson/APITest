@@ -1,4 +1,4 @@
-import engineModel from "../Models/carModel.js";
+import carModel from "../Models/carModel.js";
 
 export const getCars = async (req, res) => {
     const cars = await carModel.find({});
