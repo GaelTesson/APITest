@@ -11,7 +11,7 @@ export const getCarById = async (req, res) => {
     }
 
 export const addCar = async (req, res) => {
-    const car = new engineModel(req.body);
+    const car = new carModel(req.body);
     await car.save();
     res.status(201).json(car);
     }

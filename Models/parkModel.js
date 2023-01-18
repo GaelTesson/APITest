@@ -23,13 +23,6 @@ const parkSchema = new mongoose.Schema({
             required: true,
             trim: true
     }},
-    cars : {
-        car_id : {
-            type: mongoose.Types.ObjectId,
-            ref: 'Cars'
-            }   
-        
-    }
 
 });
 

@@ -1,9 +1,9 @@
-import offerModels from '../Models/parkModel.js';
+import parkModels from '../Models/parkModel.js';
 
 export const addPark = async (req, res) => {
     const park = new parkModels(req.body);
     await park.save();
-    res.status(201).json(offer);
+    res.status(201).json(park);
 }
 
 export const getPark = async (req, res) => {

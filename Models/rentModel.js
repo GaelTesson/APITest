@@ -16,16 +16,16 @@ const rentSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    start_date_confirmed : {
-        type: String,
-        required: true,
-        trim: true
-    },
-    end_date_confirmed : {
-        type: String,
-        required: true,
-        trim: true
-    },
+    // start_date_confirmed : {
+    //     type: String,
+    //     required: true,
+    //     trim: true
+    // },
+    // end_date_confirmed : {
+    //     type: String,
+    //     required: true,
+    //     trim: true
+    // },
     price : {
         type: Number,
         required: true,
@@ -33,9 +33,8 @@ const rentSchema = new mongoose.Schema({
     },
     car : {
         car_id : {
-            type: String,
-            required: true,
-            trim: true
+            type: mongoose.Types.ObjectId,
+            ref: 'Cars'
         }
     },
     user : {
@@ -51,10 +50,9 @@ const rentSchema = new mongoose.Schema({
         }
     },
     incident : {
-        incident_id : {
-            type: mongoose.Types.ObjectId,
-            ref: 'Incident'
-        }
+        type: Boolean,
+        default: false,
+
     },
     starting_pics_car : {
         left_side: {
@@ -118,44 +116,44 @@ const rentSchema = new mongoose.Schema({
             required: true,
             trim: true
             },
-            right_side: {
-                image_id: {
-                type: String,
-                required: true,
-                trim: true
-                },
-                image_url: {
-                type: String,
-                required: true,
-                trim: true
-                },
+        },
+        right_side: {
+            image_id: {
+            type: String,
+            required: true,
+            trim: true
             },
-            front_side: {
-                image_id: {
-                type: String,
-                required: true,
-                trim: true
-                },
-                image_url: {
-                type: String,
-                required: true,
-                trim: true
-                },
+            image_url: {
+            type: String,
+            required: true,
+            trim: true
             },
-            back_side: {
-                image_id: {
-                type: String,
-                required: true,
-                trim: true
-                },
-                image_url: {
-                type: String,
-                required: true,
-                trim: true
-                }
+        },
+        front_side: {
+            image_id: {
+            type: String,
+            required: true,
+            trim: true
+            },
+            image_url: {
+            type: String,
+            required: true,
+            trim: true
+            },
+        },
+        back_side: {
+            image_id: {
+            type: String,
+            required: true,
+            trim: true
+            },
+            image_url: {
+            type: String,
+            required: true,
+            trim: true
             }
         }
-    }
+    },
 });
 
 const Rent = mongoose.model("Rent", rentSchema)
