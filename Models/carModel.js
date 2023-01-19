@@ -24,9 +24,8 @@ const carSchema = new mongoose.Schema({
     },
     park : {
         park_id : {
-            type: String
-        //type: mongoose.Types.ObjectId,
-        //ref: 'Park'
+        type: mongoose.Types.ObjectId,
+        ref: 'Park'
         }   
     },
     doc: {

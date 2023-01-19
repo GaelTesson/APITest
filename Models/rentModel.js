@@ -16,16 +16,6 @@ const rentSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    // start_date_confirmed : {
-    //     type: String,
-    //     required: true,
-    //     trim: true
-    // },
-    // end_date_confirmed : {
-    //     type: String,
-    //     required: true,
-    //     trim: true
-    // },
     price : {
         type: Number,
         required: true,
@@ -158,5 +148,3 @@ const rentSchema = new mongoose.Schema({
 const Rent = mongoose.model("Rent", rentSchema)
 
 export default Rent
-
-    
