@@ -42,48 +42,48 @@ const carSchema = new mongoose.Schema({
         },
     car_image : {
         left_side: {
-            image_id: {
+            image_kit_id: {
             type: String,
             required: true,
             trim: true
             },
-        image_url: {
+        image_kit_url: {
             type: String,
             required: true,
             trim: true
             },
         },
         right_side: {
-            image_id: {
+            image_kit_id: {
             type: String,
             required: true,
             trim: true
             },
-        image_url: {
+        image_kit_url: {
             type: String,
             required: true,
             trim: true
             },
         },
         front_side: {
-            image_id: {
+            image_kit_id: {
             type: String,
             required: true,
             trim: true
             },
-        image_url: {
+        image_kit_url: {
             type: String,
             required: true,
             trim: true
             },
         },
         back_side: {
-            image_id: {
+            image_kit_id: {
             type: String,
             required: true,
             trim: true
             },
-        image_url: {
+        image_kit_url: {
             type: String,
             required: true,
             trim: true

@@ -28,7 +28,7 @@ router.post('/register', catchErrors(register))
 router.post('/login', catchErrors(login))
 
 // Récupération des infos d'un utilisateur
-router.get('/infos', passport.authenticate('jwt', { session: false }), catchErrors(getUserInfos))
+router.get('/:id/infos', passport.authenticate('jwt', { session: false }), catchErrors(getUserInfos))
 
 
 export default router

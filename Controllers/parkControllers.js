@@ -1,5 +1,7 @@
 import parkModels from '../Models/parkModel.js';
 
+//#swagger.tags = ['Park']
+
 export const addPark = async (req, res) => {
     const park = new parkModels(req.body);
     await park.save();

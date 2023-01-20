@@ -1,4 +1,6 @@
 import Incident from "../Models/incidentModel.js";
+
+//#swagger.tags = ['Incident']
 //
 export const getIncidents = async (req, res) => {
     const incidents = await Incident.find({});

@@ -2,6 +2,8 @@ import userModel from '../Models/userModels.js' // on importe le model
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
+//#swagger.tags = ['Users']
+
 const generateToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1d' }) // on genere un token avec l'id de l'utilisateur
 
 const generatePassword = async (password) => {
@@ -92,7 +94,7 @@ export const login = (async (req, res) => {
 
     if (user && (await bcrypt.compare(password, user.password))) { // si l'utilisateur existe et que le mot de passe est correct
         res.status(200).json({ // on renvoie un status 200 et un token
-            accessToke: generateToken(user._id),
+            accessToken: generateToken(user._id),
         })
     } else {
         res.status(401).json({
@@ -102,7 +104,9 @@ export const login = (async (req, res) => {
 })
 
 export const getUserInfos = (async (req, res) => {
-    const {_id, first_name, last_name, email, address, birthdate, phone, role} = await user.findById(req.user._id) // on recupere les infos du body
+    console.log(req.user._id)
+    const {_id, first_name, last_name, email, address, birthdate, phone, role} = await userModel.findById(req.user._id) // on recupere les infos du body
+
 
     res.status(200).json({ // on renvoie un status 200 et un token
         _id,
@@ -119,5 +123,6 @@ export const getUserInfos = (async (req, res) => {
         role
     })
 })
+
 
             

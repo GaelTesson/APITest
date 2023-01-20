@@ -1,5 +1,7 @@
 import carModel from "../Models/carModel.js";
 
+//#swagger.tags = ['Car']
+
 export const getCars = async (req, res) => {
     const cars = await carModel.find({});
     res.status(200).json(cars);

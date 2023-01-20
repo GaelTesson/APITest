@@ -1,5 +1,7 @@
 import Rent from "../Models/rentModel.js";
 
+//#swagger.tags = ['Rent']
+
 export const getRents = async (req, res) => {
     const rents = await Rent.find({});
     res.status(200).json(rents);
