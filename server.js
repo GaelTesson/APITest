@@ -13,7 +13,7 @@ const app = express()
 
 app.use(express.json())
 
-mongoose.connect(process.env.MONGODB);
+mongoose.connect(process.env.MONGODB_URI);
 
 app.use('/api/v1', router)
 
