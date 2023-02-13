@@ -50,18 +50,51 @@
     },
     "/api/v1/users/": {
       "post": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Create a new user"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "get": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Get users"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/users/{id}": {
       "get": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -71,9 +104,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Display user"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "put": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -83,9 +131,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Update user"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "delete": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -95,25 +158,60 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Delete user"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/users/register": {
       "post": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Register a new user"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        }
       }
     },
     "/api/v1/users/login": {
       "post": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Login a user"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        }
       }
     },
     "/api/v1/users/{id}/infos": {
       "get": {
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -123,23 +221,68 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Get user infos"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/parks/": {
       "post": {
+        "tags": [
+          "Parks"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Create a new park"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "get": {
+        "tags": [
+          "Parks"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Get park"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/parks/{id}": {
       "get": {
+        "tags": [
+          "Parks"
+        ],
         "description": "",
         "parameters": [
           {
@@ -149,9 +292,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Display park"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "put": {
+        "tags": [
+          "Parks"
+        ],
         "description": "",
         "parameters": [
           {
@@ -161,9 +319,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Update park"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "delete": {
+        "tags": [
+          "Parks"
+        ],
         "description": "",
         "parameters": [
           {
@@ -173,23 +346,78 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Delete park"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/cars/": {
       "post": {
+        "tags": [
+          "Cars"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Create a new car"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/car"
+              }
+            }
+          }
+        }
       },
       "get": {
+        "tags": [
+          "Cars"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Return the car with the param ID"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/cars/{id}": {
       "get": {
+        "tags": [
+          "Cars"
+        ],
         "description": "",
         "parameters": [
           {
@@ -199,9 +427,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Return the car with the param ID"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "put": {
+        "tags": [
+          "Cars"
+        ],
         "description": "",
         "parameters": [
           {
@@ -211,9 +454,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Update the car with the param ID"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "delete": {
+        "tags": [
+          "Cars"
+        ],
         "description": "",
         "parameters": [
           {
@@ -223,23 +481,68 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Delete the car with the param ID"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/incidents/": {
       "post": {
+        "tags": [
+          "Incidents"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Create a new incident"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "get": {
+        "tags": [
+          "Incidents"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Get all incident"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/incidents/{id}": {
       "get": {
+        "tags": [
+          "Incidents"
+        ],
         "description": "",
         "parameters": [
           {
@@ -249,9 +552,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Get 1 incident"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "put": {
+        "tags": [
+          "Incidents"
+        ],
         "description": "",
         "parameters": [
           {
@@ -261,9 +579,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Update an incident"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "delete": {
+        "tags": [
+          "Incidents"
+        ],
         "description": "",
         "parameters": [
           {
@@ -273,23 +606,68 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Delete an incident"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/rent/": {
       "post": {
+        "tags": [
+          "Rents"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Create a new rent"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "get": {
+        "tags": [
+          "Rents"
+        ],
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Get all rents"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     },
     "/api/v1/rent/{id}": {
       "get": {
+        "tags": [
+          "Rents"
+        ],
         "description": "",
         "parameters": [
           {
@@ -299,9 +677,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Get 1 rent"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "put": {
+        "tags": [
+          "Rents"
+        ],
         "description": "",
         "parameters": [
           {
@@ -311,9 +704,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Update a rent"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       },
       "delete": {
+        "tags": [
+          "Rents"
+        ],
         "description": "",
         "parameters": [
           {
@@ -323,7 +731,19 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Delete a rent"
+          },
+          "401": {
+            "description": "Error : unauthorized access"
+          }
+        },
+        "security": [
+          {
+            "ApiTokenAuth": []
+          }
+        ]
       }
     }
   },
