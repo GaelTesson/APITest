@@ -22,6 +22,7 @@ export const addUser =  async (req, res) => { // async await pour les requetes a
 export const getUsers = async (req, res) => {
     if (req.headers.token && req.headers.token === process.env.API_KEY) { // si le token existe
     const users = await userModel.find({}) // find pour aller chercher dans l'objet du userModel(qui est la table users definit dans le model)
+    .set({token: API_KEY})
     res.status(200).send(users)
 } else {
     res.status(401).send({'error': 'Unauthorized'})
