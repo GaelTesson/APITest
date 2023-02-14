@@ -25,7 +25,7 @@ export const getUsers = async (req, res) => {
     res.status(200).send(users)
 } else {
     res.status(401).send({'error': 'Unauthorized'})
-}console.log(req.headers.token)
+}console.log('toto' + req.headers.token)
 }
 
 export const getUserById = async (req, res) => {
