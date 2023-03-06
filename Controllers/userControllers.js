@@ -1,6 +1,7 @@
 import userModel from '../Models/userModels.js' // on importe le model
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
 
 //#swagger.tags = ['Users']
 
@@ -19,14 +20,10 @@ export const addUser =  async (req, res) => { // async await pour les requetes a
     res.status(201).json(name) // 201 = created
 }
 
-export const getUsers = async (req, res) => {
-    if (req.headers.token && req.headers.token === process.env.API_KEY) { // si le token existe
+export const getUsers = async (req, res) => { // si le token existe
         const users = await userModel.find({}) // find pour aller chercher dans l'objet du userModel(qui est la table users definit dans le model)
     res.status(200).send(users)
-} else {
-    res.status(401).send({'error': 'Unauthorized'})
-}console.log('toto' + req.headers.token)
-}
+} 
 
 export const getUserById = async (req, res) => {
     const users = await userModel.findById(req.params.id) // ici on associe le marqueur de la route a la const id
