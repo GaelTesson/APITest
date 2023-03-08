@@ -31,11 +31,24 @@ const userSchema =new mongoose.Schema({
 
     },
 
-    city: {
-        type: String,
-        required: true,
-        trim: true
+    address: {
+        street: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        city: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        zipcode: {
+            type: String,
+            required: true,
+            trim: true
+        }
     },
+    
 
     phone: {
         type: String,
