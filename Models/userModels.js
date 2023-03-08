@@ -22,24 +22,6 @@ const userSchema =new mongoose.Schema({
         lowercase: true
     },
 
-    address: {
-        street: {
-            type: String,
-            required: true,
-            trim: true
-        },
-
-        city: {
-            type: String,
-            required: true,
-            trim: true
-        },
-        zipcode: {
-            type: Number,
-            required: true,
-            trim: true
-    }},
-
     birthdate: {
         type: String,
         required: true,
