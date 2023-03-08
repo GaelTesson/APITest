@@ -38,10 +38,10 @@ const carSchema = new mongoose.Schema({
             type: String,
             required: true,
             trim: true
-        },
+        }
         },
     car_image : {
-        left_side: {
+        display: {
             image_kit_id: {
             type: String,
             required: true,
@@ -53,42 +53,6 @@ const carSchema = new mongoose.Schema({
             trim: true
             },
         },
-        right_side: {
-            image_kit_id: {
-            type: String,
-            required: true,
-            trim: true
-            },
-        image_kit_url: {
-            type: String,
-            required: true,
-            trim: true
-            },
-        },
-        front_side: {
-            image_kit_id: {
-            type: String,
-            required: true,
-            trim: true
-            },
-        image_kit_url: {
-            type: String,
-            required: true,
-            trim: true
-            },
-        },
-        back_side: {
-            image_kit_id: {
-            type: String,
-            required: true,
-            trim: true
-            },
-        image_kit_url: {
-            type: String,
-            required: true,
-            trim: true
-            },
-        }
     },
 
     specs: {
@@ -111,9 +75,8 @@ const carSchema = new mongoose.Schema({
             type: Number,
             required: true,
             trim: true
-        },
-        },
-
+        }
+    }
 });
 
 const Car = mongoose.model("Cars", carSchema) // Cars est le nom de la table, et carSchema le type de données envoyées
