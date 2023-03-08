@@ -22,7 +22,6 @@ const userSchema =new mongoose.Schema({
         lowercase: true
     },
 
-    address: {
         street: {
             type: String,
             required: true,
@@ -38,7 +37,7 @@ const userSchema =new mongoose.Schema({
             type: Number,
             required: true,
             trim: true
-    }},
+    },
 
     birthdate: {
         type: String,
