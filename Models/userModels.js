@@ -21,24 +21,22 @@ const userSchema =new mongoose.Schema({
         trim: true,
         lowercase: true
     },
+        street: {
+            type: String,
+            required: true,
+            trim: true
+        },
 
-    // address: {
-    //     street: {
-    //         type: String,
-    //         required: true,
-    //         trim: true
-    //     },
-
-    //     city: {
-    //         type: String,
-    //         required: true,
-    //         trim: true
-    //     },
-    //     zipcode: {
-    //         type: Number,
-    //         required: true,
-    //         trim: true
-    // }},
+        city: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        zipcode: {
+            type: Number,
+            required: true,
+            trim: true
+    },
 
     birthdate: {
         type: String,
