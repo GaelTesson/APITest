@@ -43,7 +43,7 @@ export const deleteUser = async (req, res) => {
 
 export const register = (async (req, res) => {
     const { first_name, last_name, email, birthdate, phone, password, role } = req.body // on recupere les infos du body
-    const { street, city, zipcode } = req.body.address
+    // const { street, city, zipcode } = req.body.address
     const userExists =await userModel.findOne({ email }) // on verifie si l'email existe deja
 
     if (userExists) { // si l'email existe deja
@@ -55,11 +55,6 @@ export const register = (async (req, res) => {
         first_name,
         last_name,
         email,
-        address: {
-            street,
-            city,
-            zipcode
-        },
         birthdate,
         phone,
         password: await generatePassword(password),
@@ -73,11 +68,6 @@ export const register = (async (req, res) => {
             first_name: user.first_name,
             last_name: user.last_name,
             email: user.email,
-            address: {
-                street: user.address.street,
-                city: user.address.city,
-                zipcode: user.address.zipcode
-            },
             birthdate: user.birthdate,
             phone: user.phone,
             role: user.role
