@@ -42,8 +42,7 @@ export const deleteUser = async (req, res) => {
 
 
 export const register = (async (req, res) => {
-    const { first_name, last_name, email, birthdate, phone, password, role } = req.body // on recupere les infos du body
-    const { street, city, zipcode } = req.body.address
+    const { first_name, last_name, email,street, city, zipcode, birthdate, phone, password, role } = req.body // on recupere les infos du body
     const userExists =await userModel.findOne({ email }) // on verifie si l'email existe deja
 
     if (userExists) { // si l'email existe deja
@@ -55,11 +54,9 @@ export const register = (async (req, res) => {
         first_name,
         last_name,
         email,
-        address:{
-            street,
-            city,
-            zipcode
-        },
+        street,
+        city,
+        zipcode,
         birthdate,
         phone,
         password: await generatePassword(password),
@@ -74,12 +71,9 @@ export const register = (async (req, res) => {
             first_name: user.first_name,
             last_name: user.last_name,
             email: user.email,
-            address:{
-                street: user.address.street,
-                city: user.address.city,
-                zipcode: user.address.zipcode
-
-            },
+            street: user.street,
+            city: user.city,
+            zipcode: user.zipcode,
             birthdate: user.birthdate,
             phone: user.phone,
             role: user.role,
@@ -109,19 +103,18 @@ export const login = (async (req, res) => {
 
 export const getUserInfos = (async (req, res) => {
     console.log(req.user._id)
-    const {_id, first_name, last_name, email, address, birthdate, phone, role} = await userModel.findById(req.user._id) // on recupere les infos du body
+    const {_id, first_name, last_name, email, street, city, zipcode, birthdate, phone, role} = await userModel.findById(req.user._id) // on recupere les infos du body
 
 
-    res.status(200).json({ // on renvoie un status 200 et un token
+    res.status(200).json({ 
+        // on renvoie un status 200 et un token
         _id,
         first_name,
         last_name,
         email,
-        address : {
-            street: address.street,
-            city: address.city,
-            zipcode: address.zipcode
-        },
+        street,
+        city,
+        zipcode,
         birthdate,
         phone,
         role

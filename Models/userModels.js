@@ -28,25 +28,24 @@ const userSchema =new mongoose.Schema({
         trim: true,
         FormData: true,
         FormDataEvent: true
-
     },
 
-    address: {
-        street: {
+    street: {
             type: String,
             required: true,
             trim: true
         },
-        city: {
-            type: String,
-            required: true,
-            trim: true
+
+    city: {
+        type: String,
+        required: true,
+        trim: true
         },
-        zipcode: {
-            type: String,
-            required: true,
-            trim: true
-        }
+
+    zipcode: {
+        type: String,
+        required: true,
+        trim: true
     },
     
 
