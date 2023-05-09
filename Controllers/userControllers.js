@@ -1,7 +1,7 @@
 import userModel from '../Models/userModels.js' // on importe le model
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
 //#swagger.tags = ['Users']
 
