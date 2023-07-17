@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 import router from './Routes/routes.js';
 import './config/passport.js'
 import cors from 'cors';
-
 import dotenv from 'dotenv';
 dotenv.config();
 

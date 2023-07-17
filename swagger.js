@@ -185,7 +185,6 @@ swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
     require('./server.js')
 })                
 
-            
 
 
 
