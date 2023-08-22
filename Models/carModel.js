@@ -22,6 +22,11 @@ const carSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    image : {
+        type: String,
+        required: true,
+        trim: true
+    },
     park : {
         park_id : {
         type: mongoose.Types.ObjectId,
