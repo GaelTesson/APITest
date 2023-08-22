@@ -37,7 +37,7 @@ export const updateUser = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
     const users = await userModel.findByIdAndDelete(req.params.id, req.body);
-    res.status(200).json(users)
+    res.status(200).send('User deleted') // a supprimer si route postman ne marche pas - remplacer par res.status(200).json(users)
 }
 
 
