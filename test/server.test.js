@@ -58,6 +58,13 @@ describe('Testing users routes', () => {
 		expect(response.type).toBe('application/json')
 	})
 
+	it('should return an user', async () => {
+		const response = await request(app).get(`/api/v1/users/${await getUserId()}`)
+		.set({ token: API_KEY })
+		expect(response.statusCode).toBe(200)
+		expect(response.type).toBe('application/json')
+	})
+
 	it('should update an user', async () => {
 		const response = await request(app).put(`/api/v1/users/${await getUserId()}`)
 		.send({
@@ -78,3 +85,4 @@ describe('Testing users routes', () => {
 
 	afterAll(() => userModel.deleteMany({ role: 'test' }))
 })
+	

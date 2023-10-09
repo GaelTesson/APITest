@@ -87,11 +87,10 @@ export const register = (async (req, res) => {
 })
 
 export const login = (async (req, res) => {
-    const { email, password } = req.body // on recupere les infos du body
-    const user = await userModel.findOne({ email }) // on verifie si l'email existe deja
-
-    if (user && (await bcrypt.compare(password, user.password))) { // si l'utilisateur existe et que le mot de passe est correct
-        res.status(200).json({ // on renvoie un status 200 et un token
+    const { email, password } = req.body 
+    const user = await userModel.findOne({ email }) 
+    if (user && (await bcrypt.compare(password, user.password))) { 
+        res.status(200).json({ 
             accessToken: generateToken(user._id),
         })
     } else {

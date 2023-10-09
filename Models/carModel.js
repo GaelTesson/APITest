@@ -36,12 +36,12 @@ const carSchema = new mongoose.Schema({
     doc: {
         insurance: {
             type: String,
-            required: true,
+            required: false,
             trim: true
         },
         certificate: {
             type: String,
-            required: true,
+            required: false,
             trim: true
         }
         },
@@ -49,12 +49,12 @@ const carSchema = new mongoose.Schema({
         display: {
             image_kit_id: {
             type: String,
-            required: true,
+            required: false,
             trim: true
             },
         image_kit_url: {
             type: String,
-            required: true,
+            required: false,
             trim: true
             },
         },
@@ -63,22 +63,22 @@ const carSchema = new mongoose.Schema({
     specs: {
         engine: { // diesel, electrique, essence...etc
             type: String,
-            required: true,
+            required: false,
             trim: true
         },
         gearbox: {
             type: String,
-            required: true,
+            required: false,
             trim: true
         },
         seats: {
             type: Number,
-            required: true,
+            required: false,
             trim: true
         },
         door: {
             type: Number,
-            required: true,
+            required: false,
             trim: true
         }
     }
